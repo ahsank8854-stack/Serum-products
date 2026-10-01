@@ -240,17 +240,17 @@ export const ProductDetails = () => {
 
               {/* Guarantees */}
               <div className="row g-3 pt-3 border-top text-muted small">
-                <div className="col-4 d-flex align-items-center gap-2">
-                  <Truck size={18} className="text-success" />
+                <div className="col-12 col-sm-4 d-flex align-items-center gap-2">
+                  <Truck size={18} className="text-success flex-shrink-0" />
                   <span>Free shipping &gt;$75</span>
                 </div>
-                <div className="col-4 d-flex align-items-center gap-2">
-                  <RefreshCw size={18} className="text-success" />
-                  <span>30-Day Returns</span>
+                <div className="col-12 col-sm-4 d-flex align-items-center gap-2">
+                  <RefreshCw size={18} className="text-success flex-shrink-0" />
+                  <span>30-Day Returns Guarantee</span>
                 </div>
-                <div className="col-4 d-flex align-items-center gap-2">
-                  <ShieldCheck size={18} className="text-success" />
-                  <span>100% Organic</span>
+                <div className="col-12 col-sm-4 d-flex align-items-center gap-2">
+                  <ShieldCheck size={18} className="text-success flex-shrink-0" />
+                  <span>100% Bio-Active Organic</span>
                 </div>
               </div>
 

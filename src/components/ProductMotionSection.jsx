@@ -45,7 +45,7 @@ export const ProductMotionSection = () => {
                 playsInline
                 poster={selectedProduct.images?.[0]}
                 className="w-100 object-fit-cover d-block"
-                style={{ height: '480px', filter: 'brightness(0.95)' }}
+                style={{ minHeight: '320px', maxHeight: '480px', filter: 'brightness(0.95)' }}
               >
                 <source src={currentVideo} type="video/mp4" />
               </video>
@@ -60,22 +60,22 @@ export const ProductMotionSection = () => {
 
               {/* Product Info Glass Overlay */}
               <div
-                className="position-absolute bottom-0 start-0 end-0 p-4 text-white"
+                className="position-absolute bottom-0 start-0 end-0 p-3 p-sm-4 text-white"
                 style={{
-                  background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(18,36,25,0.92) 100%)'
+                  background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(18,36,25,0.95) 100%)'
                 }}
               >
-                <div className="d-flex align-items-center justify-content-between">
+                <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
                   <div>
                     <span className="badge-verdant badge-gold mb-1">{selectedProduct.category}</span>
-                    <h3 className="font-serif fs-3 mb-1 text-white">{selectedProduct.name}</h3>
-                    <p className="small text-light opacity-90 mb-0 d-none d-sm-block" style={{ maxWidth: '400px' }}>
+                    <h3 className="font-serif fs-4 fs-sm-3 mb-1 text-white">{selectedProduct.name}</h3>
+                    <p className="small text-light opacity-90 mb-0 d-none d-md-block" style={{ maxWidth: '400px' }}>
                       {selectedProduct.shortDescription}
                     </p>
                   </div>
                   <Link
                     to={`/product/${selectedProduct.id}`}
-                    className="btn btn-verdant-gold py-2 px-4 fs-6 text-nowrap"
+                    className="btn btn-verdant-gold py-2 px-3 fs-6 text-nowrap w-100 w-sm-auto justify-content-center"
                   >
                     Shop Formula <ArrowRight size={16} />
                   </Link>

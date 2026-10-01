@@ -75,15 +75,15 @@ export const RitualShowcaseSection = () => {
 
         {/* Clinical Proof Statistics Bar */}
         <div className="row g-4 mb-5 p-4 rounded-3 bg-dark bg-opacity-75 border border-secondary text-center">
-          <div className="col-12 col-md-4 border-end border-secondary border-opacity-50">
+          <div className="col-12 col-md-4 border-bottom border-md-end border-secondary border-opacity-50 pb-3 pb-md-0">
             <div className="display-5 font-serif text-warning fw-bold mb-1">96%</div>
             <p className="small text-light opacity-90 mb-0">Reported reduction in scalp flaking & dryness in 14 days</p>
           </div>
-          <div className="col-12 col-md-4 border-end border-secondary border-opacity-50">
+          <div className="col-12 col-md-4 border-bottom border-md-end border-secondary border-opacity-50 pb-3 pb-md-0">
             <div className="display-5 font-serif text-warning fw-bold mb-1">92%</div>
             <p className="small text-light opacity-90 mb-0">Observed mended cuticles & reduced hair breakage</p>
           </div>
-          <div className="col-12 col-md-4">
+          <div className="col-12 col-md-4 pt-2 pt-md-0">
             <div className="display-5 font-serif text-warning fw-bold mb-1">88%</div>
             <p className="small text-light opacity-90 mb-0">Measured increase in hair strand thickness & density</p>
           </div>
