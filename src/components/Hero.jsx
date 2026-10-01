@@ -31,18 +31,18 @@ export const Hero = () => {
             {/* Shutter Wiping Glass Eyebrow Pill */}
             <Link
               to="/shop?category=hair-oil"
-              className="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill hero-pill-glass text-warning text-decoration-none mb-4"
+              className="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill hero-pill-glass text-warning text-decoration-none mb-4 max-w-100 flex-wrap"
               style={{ fontSize: '0.78rem', letterSpacing: '0.12em' }}
             >
-              <Sparkles size={14} className="text-warning" />
+              <Sparkles size={14} className="text-warning flex-shrink-0" />
               <span className="text-uppercase fw-bold text-white">VIEW OUR MERIDIAN* BOTANICAL WORK</span>
-              <ChevronRight size={14} className="text-light" />
+              <ChevronRight size={14} className="text-light flex-shrink-0" />
             </Link>
 
             {/* React Bits TextType Animated Headline */}
             <h1
               className="display-2 font-serif fw-normal text-white mb-4"
-              style={{ lineHeight: '1.1', letterSpacing: '-0.02em', minHeight: '2.4em' }}
+              style={{ lineHeight: '1.15', letterSpacing: '-0.02em', wordBreak: 'break-word' }}
             >
               <TextType
                 text={[
@@ -70,17 +70,17 @@ export const Hero = () => {
             </p>
 
             {/* Wiping CTA Buttons */}
-            <div className="d-flex flex-wrap align-items-center gap-3 mb-5">
-              <div className="btn-wipe" style={{ '--btn-delay': '1.05s' }}>
-                <Link to="/shop" className="btn btn-verdant-gold py-3 px-4 fs-6">
+            <div className="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-3 mb-5">
+              <div className="btn-wipe w-100 w-sm-auto" style={{ '--btn-delay': '1.05s' }}>
+                <Link to="/shop" className="btn btn-verdant-gold py-3 px-4 fs-6 w-100">
                   <span className="btn-wipe-inner" style={{ '--btn-delay': '1.05s' }}>
                     SEE IT HAPPEN <ArrowRight size={18} />
                   </span>
                 </Link>
               </div>
 
-              <div className="btn-wipe" style={{ '--btn-delay': '1.13s' }}>
-                <Link to="/about" className="btn btn-verdant-outline text-white border-white py-3 px-4 fs-6">
+              <div className="btn-wipe w-100 w-sm-auto" style={{ '--btn-delay': '1.13s' }}>
+                <Link to="/about" className="btn btn-verdant-outline text-white border-white py-3 px-4 fs-6 w-100">
                   <span className="btn-wipe-inner" style={{ '--btn-delay': '1.13s' }}>
                     DISCUSS A PLAN
                   </span>

@@ -34,30 +34,30 @@ export const Navbar = () => {
     <>
       {/* Top Announcement Bar */}
       <div className="top-bar text-center">
-        <div className="container d-flex justify-content-center align-items-center gap-2">
-          <Leaf size={14} className="text-warning" />
-          <span>COMPLIMENTARY EXPRESS SHIPPING ON ORDERS OVER $75 &bull; USE CODE <strong>VERDANT15</strong> FOR 15% OFF</span>
+        <div className="container d-flex justify-content-center align-items-center gap-1 gap-sm-2 flex-wrap py-1">
+          <Leaf size={13} className="text-warning flex-shrink-0 d-none d-sm-inline" />
+          <span className="text-wrap">COMPLIMENTARY EXPRESS SHIPPING OVER $75 &bull; CODE <strong>VERDANT15</strong> FOR 15% OFF</span>
         </div>
       </div>
 
       {/* Main Sticky Header */}
-      <header className={`sticky-top-navbar ${isScrolled ? 'shadow-sm py-2' : 'py-3'}`}>
+      <header className={`sticky-top-navbar ${isScrolled ? 'shadow-sm py-2' : 'py-2 py-md-3'}`}>
         <div className="container">
           <div className="d-flex align-items-center justify-content-between">
             
             {/* Mobile Hamburger Menu Toggle */}
             <button
-              className="d-lg-none icon-btn-nav me-2"
+              className="d-lg-none icon-btn-nav me-1 me-sm-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle navigation"
             >
-              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
 
             {/* Brand Logo */}
-            <Link to="/" className="navbar-brand-logo d-flex align-items-center gap-2 me-lg-4">
+            <Link to="/" className="navbar-brand-logo d-flex align-items-center gap-1 gap-sm-2 me-auto me-lg-4">
               <span style={{ color: 'var(--color-primary)' }}>VERDANT</span>
-              <span style={{ fontSize: '0.7rem', letterSpacing: '0.2em', color: 'var(--color-accent)', fontWeight: 600 }}>BOTANICALS</span>
+              <span style={{ fontSize: '0.65rem', letterSpacing: '0.15em', color: 'var(--color-accent)', fontWeight: 600 }} className="d-none d-xs-inline d-sm-inline">BOTANICALS</span>
             </Link>
 
             {/* Desktop Navigation Links */}
