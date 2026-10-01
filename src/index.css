@@ -912,4 +912,167 @@ section input.form-control::placeholder {
   }
 }
 
+/* ==========================================================================
+   COMPREHENSIVE MULTI-DEVICE RESPONSIVE SYSTEM (TV, LAPTOP, IPAD, MOBILE)
+   ========================================================================== */
+
+/* 1. TV & ULTRA-WIDE SCREENS (>= 1920px) */
+@media (min-width: 1920px) {
+  .container, .container-lg, .container-xl {
+    max-width: 1540px !important;
+  }
+  
+  body {
+    font-size: 17px;
+  }
+
+  .section-title {
+    font-size: 3.2rem;
+  }
+
+  .product-title {
+    font-size: 1.45rem;
+  }
+
+  .hero-wrapper {
+    min-height: 85vh;
+  }
+}
+
+/* 2. LAPTOPS & DESKTOPS (1200px - 1919px) */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 3. IPADS & TABLETS LANDSCAPE (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .product-title {
+    font-size: 1.2rem;
+  }
+
+  .btn-verdant-primary,
+  .btn-verdant-outline,
+  .btn-verdant-gold {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* 4. IPADS & TABLETS PORTRAIT (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hero-wrapper {
+    min-height: 80vh;
+  }
+
+  .product-details {
+    padding: 1rem;
+  }
+
+  .product-title {
+    font-size: 1.15rem;
+  }
+
+  .btn-verdant-primary,
+  .btn-verdant-outline,
+  .btn-verdant-gold {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* 5. MOBILE PHONES & SMALL PADS (<= 767px) */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    line-height: 1.22;
+  }
+
+  .section-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-wrapper {
+    min-height: 100dvh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .display-2 {
+    font-size: 2.2rem !important;
+  }
+
+  .btn-verdant-primary,
+  .btn-verdant-outline,
+  .btn-verdant-gold {
+    width: 100%;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.8rem;
+  }
+
+  .product-details {
+    padding: 0.85rem;
+  }
+
+  .product-title {
+    font-size: 1.05rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .btn-add-cart {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .cart-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* 6. SMALL MOBILE PHONES (<= 480px) */
+@media (max-width: 480px) {
+  .display-2 {
+    font-size: 1.85rem !important;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+  }
+
+  .product-card {
+    border-radius: 6px;
+  }
+
+  .product-badge-wrapper {
+    top: 8px;
+    left: 8px;
+  }
+
+  .product-wishlist-btn {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
 
