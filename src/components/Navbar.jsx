@@ -32,17 +32,16 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="navbar-sticky-wrapper position-sticky top-0 start-0 w-100" style={{ zIndex: 1030 }}>
-        {/* Top Announcement Bar */}
-        <div className="top-bar text-center">
-          <div className="container d-flex justify-content-center align-items-center gap-1 gap-sm-2 flex-wrap py-1">
-            <Leaf size={13} className="text-warning flex-shrink-0 d-none d-sm-inline" />
-            <span className="text-wrap">COMPLIMENTARY EXPRESS SHIPPING OVER $75 &bull; CODE <strong>VERDANT15</strong> FOR 15% OFF</span>
-          </div>
+      {/* Top Announcement Bar */}
+      <div className="top-bar text-center">
+        <div className="container d-flex justify-content-center align-items-center gap-1 gap-sm-2 flex-wrap py-1">
+          <Leaf size={13} className="text-warning flex-shrink-0 d-none d-sm-inline" />
+          <span className="text-wrap">COMPLIMENTARY EXPRESS SHIPPING OVER $75 &bull; CODE <strong>VERDANT15</strong> FOR 15% OFF</span>
         </div>
+      </div>
 
-        {/* Main Sticky Header */}
-        <header className={`sticky-top-navbar ${isScrolled ? 'shadow-sm py-2' : 'py-2 py-md-3'}`}>
+      {/* Main Sticky Header */}
+      <header className={`sticky-top-navbar ${isScrolled ? 'shadow-sm py-2' : 'py-2 py-md-3'}`}>
         <div className="container">
           <div className="d-flex align-items-center justify-content-between">
             
@@ -155,7 +154,6 @@ export const Navbar = () => {
           )}
         </div>
       </header>
-    </div>
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
