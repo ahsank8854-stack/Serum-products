@@ -24,7 +24,10 @@ export const Hero = () => {
       {/* Hero Feathered Gradient Overlay */}
       <div className="hero-feather-overlay" />
 
-      <div className="container hero-content py-5 my-5 position-relative z-2">
+      <div
+        className="container hero-content position-relative z-2"
+        style={{ paddingTop: 'clamp(110px, 15vh, 160px)', paddingBottom: '4rem' }}
+      >
         <div className="row align-items-center">
           <div className="col-lg-9 col-xl-8">
             
