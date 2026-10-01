@@ -554,43 +554,49 @@ a:hover {
   bottom: 0;
   background: rgba(18, 36, 25, 0.4);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: 1050;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: var(--transition-smooth);
 }
 
 .cart-drawer-overlay.open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .cart-drawer {
   position: fixed;
   top: 0;
-  right: -450px;
+  right: 0;
   width: 100%;
   max-width: 440px;
   height: 100vh;
+  height: 100dvh;
   background-color: var(--bg-card);
   z-index: 1060;
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.35s ease;
 }
 
 .cart-drawer.open {
-  transform: translateX(-450px);
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 @media (max-width: 576px) {
   .cart-drawer {
-    right: -100%;
-    max-width: 100%;
-  }
-  .cart-drawer.open {
-    transform: translateX(-100%);
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 
