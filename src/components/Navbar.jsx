@@ -55,26 +55,50 @@ export const Navbar = () => {
             </button>
 
             {/* Brand Logo */}
-            <Link to="/" className="navbar-brand-logo d-flex align-items-center gap-1 gap-sm-2 me-auto me-lg-4">
+            <Link
+              to="/"
+              onClick={() => { window.scrollTo({ top: 0, behavior: 'instant' }); setIsMobileMenuOpen(false); }}
+              className="navbar-brand-logo d-flex align-items-center gap-1 gap-sm-2 me-auto me-lg-4"
+            >
               <span style={{ color: 'var(--color-primary)' }}>VERDANT</span>
               <span style={{ fontSize: '0.65rem', letterSpacing: '0.15em', color: 'var(--color-accent)', fontWeight: 600 }} className="d-none d-xs-inline d-sm-inline">BOTANICALS</span>
             </Link>
 
             {/* Desktop Navigation Links */}
             <nav className="d-none d-lg-flex align-items-center gap-1 mx-auto">
-              <NavLink to="/" className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}>
+              <NavLink
+                to="/"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
+                className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}
+              >
                 Home
               </NavLink>
-              <NavLink to="/shop" className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}>
+              <NavLink
+                to="/shop"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
+                className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}
+              >
                 Shop
               </NavLink>
-              <NavLink to="/about" className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}>
+              <NavLink
+                to="/about"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
+                className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}
+              >
                 About
               </NavLink>
-              <NavLink to="/ingredients" className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}>
+              <NavLink
+                to="/ingredients"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
+                className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}
+              >
                 Ingredients
               </NavLink>
-              <NavLink to="/contact" className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}>
+              <NavLink
+                to="/contact"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
+                className={({ isActive }) => `nav-link-verdant ${isActive ? 'active' : ''}`}
+              >
                 Contact
               </NavLink>
             </nav>
@@ -169,22 +193,46 @@ export const Navbar = () => {
           </div>
 
           <div className="d-flex flex-column gap-3 mb-auto" style={{ fontSize: '1.2rem', fontFamily: 'var(--font-serif)' }}>
-            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-dark fw-medium py-2 border-bottom">
+            <Link
+              to="/"
+              onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }); }}
+              className="text-dark fw-medium py-2 border-bottom"
+            >
               Home
             </Link>
-            <Link to="/shop" onClick={() => setIsMobileMenuOpen(false)} className="text-dark fw-medium py-2 border-bottom">
+            <Link
+              to="/shop"
+              onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }); }}
+              className="text-dark fw-medium py-2 border-bottom"
+            >
               Shop All Products
             </Link>
-            <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-dark fw-medium py-2 border-bottom">
+            <Link
+              to="/about"
+              onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }); }}
+              className="text-dark fw-medium py-2 border-bottom"
+            >
               Our Story & Ethos
             </Link>
-            <Link to="/ingredients" onClick={() => setIsMobileMenuOpen(false)} className="text-dark fw-medium py-2 border-bottom">
+            <Link
+              to="/ingredients"
+              onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }); }}
+              className="text-dark fw-medium py-2 border-bottom"
+            >
               Botanical Ingredients
             </Link>
-            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-dark fw-medium py-2 border-bottom">
+            <Link
+              to="/contact"
+              onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }); }}
+              className="text-dark fw-medium py-2 border-bottom"
+            >
               Contact & Support
             </Link>
-            <Link to="/cart" onClick={() => setIsMobileMenuOpen(false)} className="text-dark fw-medium py-2 border-bottom d-flex justify-content-between">
+            <Link
+              to="/cart"
+              onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }); }}
+              className="text-dark fw-medium py-2 border-bottom d-flex justify-content-between"
+            >
               <span>View Shopping Bag</span>
               <span className="badge bg-success rounded-pill">{totalCartCount}</span>
             </Link>
@@ -192,7 +240,11 @@ export const Navbar = () => {
 
           <div className="pt-4 border-top">
             <p className="small text-muted mb-2">Sustainable &bull; Organic &bull; Cruelty-Free</p>
-            <Link to="/shop" onClick={() => setIsMobileMenuOpen(false)} className="btn btn-verdant-primary w-100">
+            <Link
+              to="/shop"
+              onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }); }}
+              className="btn btn-verdant-primary w-100"
+            >
               Shop Botanical Rituals
             </Link>
           </div>
