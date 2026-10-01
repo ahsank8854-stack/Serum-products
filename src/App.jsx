@@ -29,7 +29,7 @@ function App() {
           <CartDrawer />
           <ToastNotification />
           
-          <div className="flex-grow-1">
+          <main className="flex-grow-1 main-content-wrapper">
             <PageTransition>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -43,7 +43,7 @@ function App() {
                 <Route path="*" element={<Home />} />
               </Routes>
             </PageTransition>
-          </div>
+          </main>
 
           <Footer />
         </div>

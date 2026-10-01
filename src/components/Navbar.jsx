@@ -32,16 +32,17 @@ export const Navbar = () => {
 
   return (
     <>
-      {/* Top Announcement Bar */}
-      <div className="top-bar text-center">
-        <div className="container d-flex justify-content-center align-items-center gap-1 gap-sm-2 flex-wrap py-1">
-          <Leaf size={13} className="text-warning flex-shrink-0 d-none d-sm-inline" />
-          <span className="text-wrap">COMPLIMENTARY EXPRESS SHIPPING OVER $75 &bull; CODE <strong>VERDANT15</strong> FOR 15% OFF</span>
+      <div className="navbar-fixed-wrapper">
+        {/* Top Announcement Bar */}
+        <div className="top-bar text-center">
+          <div className="container d-flex justify-content-center align-items-center gap-1 gap-sm-2 flex-wrap py-1">
+            <Leaf size={13} className="text-warning flex-shrink-0 d-none d-sm-inline" />
+            <span className="text-wrap">COMPLIMENTARY EXPRESS SHIPPING OVER $75 &bull; CODE <strong>VERDANT15</strong> FOR 15% OFF</span>
+          </div>
         </div>
-      </div>
 
-      {/* Main Sticky Header */}
-      <header className={`sticky-top-navbar ${isScrolled ? 'shadow-sm py-2' : 'py-2 py-md-3'}`}>
+        {/* Main Header */}
+        <header className={`sticky-top-navbar ${isScrolled ? 'shadow-sm py-2' : 'py-2 py-md-3'}`}>
         <div className="container">
           <div className="d-flex align-items-center justify-content-between">
             
@@ -178,12 +179,13 @@ export const Navbar = () => {
           )}
         </div>
       </header>
+    </div>
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
         <div
           className="d-lg-none position-fixed top-0 start-0 w-100 h-100 bg-white z-3 p-4 d-flex flex-column"
-          style={{ backgroundColor: 'var(--bg-primary)', zIndex: 1040 }}
+          style={{ backgroundColor: 'var(--bg-primary)', zIndex: 1000000 }}
         >
           <div className="d-flex justify-content-between align-items-center pb-3 border-bottom mb-4">
             <span className="navbar-brand-logo">VERDANT</span>
