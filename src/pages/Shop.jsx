@@ -214,7 +214,7 @@ export const Shop = () => {
           </aside>
 
           {/* Main Products Listing */}
-          <main className="col-lg-9">
+          <div className="col-lg-9">
             
             {/* Top Toolbar (Product count + Mobile filter toggle + Sorting) */}
             <div className="d-flex flex-wrap align-items-center justify-content-between pb-3 mb-4 border-bottom gap-3">
@@ -268,7 +268,7 @@ export const Shop = () => {
               </div>
             )}
 
-          </main>
+          </div>
 
         </div>
       </div>

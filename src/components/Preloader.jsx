@@ -6,33 +6,47 @@ export const Preloader = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    // Lock body scrolling during preloader loading
+    document.body.style.overflow = 'hidden';
+
     // Simulate luxury progress loading
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(() => setLoading(false), 300);
+          setTimeout(() => {
+            setLoading(false);
+            document.body.style.overflow = '';
+          }, 650);
           return 100;
         }
         return prev + 5;
       });
     }, 45);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      document.body.style.overflow = '';
+    };
   }, []);
 
   if (!loading) return null;
 
   return (
     <div
-      className="position-fixed top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center"
+      className="position-fixed top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center preloader-screen"
       style={{
         backgroundColor: '#122419',
         color: '#FDFBF7',
-        zIndex: 9999,
-        transition: 'opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.6s ease',
+        zIndex: 99999999,
+        inset: 0,
+        width: '100vw',
+        height: '100vh',
+        height: '100dvh',
+        transition: 'opacity 0.65s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.65s ease',
         opacity: progress === 100 ? 0 : 1,
-        pointerEvents: progress === 100 ? 'none' : 'auto'
+        pointerEvents: progress === 100 ? 'none' : 'auto',
+        visibility: progress === 100 && !loading ? 'hidden' : 'visible'
       }}
     >
       <div className="text-center p-4">

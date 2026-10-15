@@ -14,7 +14,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <main>
+    <div className="home-page">
       <Hero />
       <FeaturedProducts />
       <RitualShowcaseSection />
@@ -23,6 +23,6 @@ export const Home = () => {
       <IngredientsSection />
       <TestimonialsSection />
       <NewsletterSection />
-    </main>
+    </div>
   );
 };

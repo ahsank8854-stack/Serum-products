@@ -74,12 +74,12 @@ body {
   padding: 0;
 }
 
-main, .main-content-wrapper {
+.main-content-wrapper {
   padding-top: 98px !important;
 }
 
 @media (max-width: 767px) {
-  main, .main-content-wrapper {
+  .main-content-wrapper {
     padding-top: 85px !important;
   }
 }
@@ -732,9 +732,9 @@ section input.form-control::placeholder {
 /* HERO VIDEO & CONTAINER */
 .hero-wrapper {
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
-  height: 100vh;
+  min-height: calc(100vh - 98px);
+  min-height: calc(100dvh - 98px);
+  height: calc(100vh - 98px);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -991,6 +991,16 @@ section input.form-control::placeholder {
   }
 }
 
+.preloader-screen {
+  z-index: 99999999 !important;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  background-color: #122419 !important;
+}
+
 /* ==========================================================================
    COMPREHENSIVE MULTI-DEVICE RESPONSIVE SYSTEM (TV, LAPTOP, IPAD, MOBILE)
    ========================================================================== */
@@ -1014,7 +1024,8 @@ section input.form-control::placeholder {
   }
 
   .hero-wrapper {
-    min-height: 85vh;
+    min-height: calc(100vh - 98px);
+    height: calc(100vh - 98px);
   }
 }
 
@@ -1050,7 +1061,8 @@ section input.form-control::placeholder {
   }
 
   .hero-wrapper {
-    min-height: 80vh;
+    min-height: calc(100vh - 98px);
+    height: auto;
   }
 
   .product-details {
@@ -1086,10 +1098,10 @@ section input.form-control::placeholder {
   }
 
   .hero-wrapper {
-    min-height: 100dvh;
+    min-height: calc(100dvh - 85px);
     height: auto;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .hero-pill-glass {
